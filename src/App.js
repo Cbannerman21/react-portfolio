@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
-import About from './Components/About';
 import Nav from './Components/Nav';
-import Portfolio from "./Components/Portfolio";
+import About from './Components/About';
+import Gallery from './Components/Gallery';
 import ContactForm from './Components/Contact';
 import Footer from './Components/Footer';
+
+
 
 function App() {
   const [categories] = useState([
     {
-      name: 'hobbies',
-      description: 'A small glimpse of the hobbies of a simple man',
+      name: 'Hobbies',
+      description: 'Some of the things I enjoy doing in my off time.',
     },
     {
-      name: 'tech',
-      description: 'Some newly acquired skills',
+      name: 'Skills',
+      description: 'Recently aquired skill sets.',
     },
 
   ]);
@@ -34,7 +36,7 @@ function App() {
         {!contactSelected ? (
           <>
             <About></About>
-            <Portfolio currentCategory={currentCategory}></Portfolio>
+            <Gallery currentCategory={currentCategory}></Gallery>
             <ContactForm></ContactForm>
             <Footer></Footer>
           </>
